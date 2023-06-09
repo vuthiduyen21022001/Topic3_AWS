@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Volo.Abp.Domain.Entities.Auditing;
+
+namespace UploadAws.Sales
+{
+    public class Sale : AuditedAggregateRoot<Guid>
+    {
+        public string AccessKeyId { get; set; }
+        public string SecretAccessKey { get; set; }
+        public bool UseCredentials { get; set; }
+        public bool UseTemporaryCredentials { get; set; }
+        public bool UseTemporaryFederatedCredentials { get; set; }
+        public string ProfileName { get; set; }
+        public string ProfilesLocation { get; set; }
+        public string Region { get; set; }
+        public string Name { get; set; }
+        public string Policy { get; set; }
+        public double DurationSeconds { get; set; }
+        public string ContainerName { get; set; }
+        public bool CreateContainerIfNotExists { get; set; }
+    }
+}

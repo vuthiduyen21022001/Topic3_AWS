@@ -1,0 +1,32 @@
+﻿@page
+@model UploadAws.Web.Pages.salesModel
+
+@using UploadAws.Localization
+@using UploadAws.Web.Pages
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<UploadAwsResource> L
+@section scripts
+{
+        <abp-script src="/Pages/Sales/Index.js" />
+}
+<abp-card>
+    <abp-card-header>
+      @*  <h2>@L["Sales"]</h2>*@
+        <abp-row>
+        <abp-column size-md="_6">
+            <abp-card-title>@L["Sales"]</abp-card-title>
+        </abp-column>
+        <abp-column size-md="_6" class="text-end">
+            <abp-button id="NewSaleButton"
+                        text="@L["NewSale"].Value"
+                        icon="plus"
+                        button-type="Primary"/>
+        </abp-column>
+    </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="SalesTable"></abp-table>
+    </abp-card-body>
+</abp-card>
+
+
